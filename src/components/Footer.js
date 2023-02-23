@@ -14,17 +14,18 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.3rem;
   background-color: #333333;
   color: white;
 `;
+
 
 const Link = styled.a`
   position: relative;
