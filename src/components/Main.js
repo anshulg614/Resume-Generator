@@ -23,6 +23,7 @@ const MainWrapper = styled.main`
   padding: 4rem 8rem;
   margin: 0 auto;
   margin-bottom: 2rem;
+  background-color: #333333;
 
   @media (max-width: 1600px) {
     flex-direction: column;

@@ -22,8 +22,9 @@ const EducationContainer = styled.div`
   width: 210mm;
   padding: 2rem;
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #1f1f1f;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
 `;
 
 export default Education;

@@ -21,7 +21,8 @@ gap: 1rem;
 width: 210mm;
 padding: 2rem;
 border-radius: 5px;
-background-color: #eee;
+background-color: #1f1f1f;
+color: white;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
