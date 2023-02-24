@@ -10,6 +10,7 @@ const Main = () => {
       <Personal />
       <Education />
       <Experience />
+      <ButtonWrapper>Load Resume</ButtonWrapper>
     </MainWrapper>
   );
 };
@@ -28,6 +29,25 @@ const MainWrapper = styled.main`
   @media (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
+  }
+`;
+
+const ButtonWrapper = styled.button`
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 227.5mm;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  background-color: #c25c0e;
+  color: #eee;
+
+  &:hover {
+    background-color: #b14b0d;
+  }
+
+  &:active {
+    background-color: #a03a0c;
   }
 `;
 
