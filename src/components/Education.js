@@ -6,11 +6,11 @@ const Education = () => {
   return (
     <EducationContainer>
         <p>Education</p>
-      <Input type="text" placeholder="University Name" />
-      <Input type="text" placeholder="City" />
-      <Input type="text" placeholder="Degree" />
-      <Input type="text" placeholder="From" />
-      <Input type="text" placeholder="To" />
+      <Input type="text" placeholder="University Name" value = {Education.universityName}/>
+      <Input type="text" placeholder="City" value = {Education.city}/>
+      <Input type="text" placeholder="Degree" value={Education.degree}/>
+      <Input type="text" placeholder="From" value={Education.from}/>
+      <Input type="text" placeholder="To" value={Education.to}/>
     </EducationContainer>
   );
 };
