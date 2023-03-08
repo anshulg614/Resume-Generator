@@ -1,16 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 
-const Resume = ({ education }) => {
+const Resume = ({ education, experience, personal }) => {
   return (
     <ResumeContainer>
       <h2>Resume</h2>
       <div>
-        <p>{education.universityName}</p>
-        <p>{education.city}</p>
-        <p>{education.degree} {education.subject} </p>
+        <p>{personal.name}</p>
+        <p>{personal.address}</p>
+        <p>{personal.email} </p>
+        <p>{personal.number}</p>
         <p>
           {education.from} - {education.to}
+        </p>
+        <p>{education.universityName}</p>
+        <p>{education.city}</p>
+        <p>
+          {education.degree} {education.subject}
+        </p>
+        <p>
+          {education.from} - {education.to}
+        </p>
+        <p>{experience.position}</p>
+        <p>{experience.company}</p>
+        <p>{experience.city}</p>
+        <p>
+          {experience.from} - {experience.to}
         </p>
       </div>
     </ResumeContainer>

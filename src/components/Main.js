@@ -15,10 +15,22 @@ const Main = () => {
     from: "",
     to: "",
   });
+  const [experience, setExperience] = useState({
+    position: "",
+    company: "",
+    city: "",
+    from: "",
+    to: "",
+  });
+  const [personal, setPersonal] = useState({
+    name: "",
+    address: "",
+    email: "",
+    number: "",
+  });
 
-  const handleInputChange = (e, id) => {
+  const handleEducationInputChange = (e) => {
     const { name, value } = e.target;
-    console.log("smth happened");
     setEducation(prevState => {
       return {
         ...prevState,
@@ -26,7 +38,27 @@ const Main = () => {
       };
     });
   };
+
+  const handleExperienceInputChange = (e) => {
+    const { name, value } = e.target;
+    setExperience(prevState => {
+      return {
+        ...prevState,
+        [name]: value
+      };
+    });
+  };
   
+  const handlePersonalInputChange = (e) => {
+    const { name, value } = e.target;
+    console.log("smth happened");
+    setPersonal(prevState => {
+      return {
+        ...prevState,
+        [name]: value
+      };
+    });
+  };
   
 
   const handleLoadResume = () => {
@@ -37,9 +69,9 @@ const Main = () => {
     <MainWrapper>
       {!showResume && (
         <>
-          <Personal />
-          <Education education={education} onChange={handleInputChange} />
-          <Experience />
+          <Personal personal={personal} onChange={handlePersonalInputChange}/>
+          <Education education={education} onChange={handleEducationInputChange} />
+          <Experience experience = {experience} onChange = {handleExperienceInputChange}/>
           <ButtonWrapper showResume={showResume} onClick={handleLoadResume}>
             Load Resume
           </ButtonWrapper>
@@ -47,7 +79,7 @@ const Main = () => {
       )}
       {showResume && (
         <>
-          <Resume education={education} />
+          <Resume education={education} experience = {experience} personal = {personal} />
           <ButtonWrapper showResume={showResume} onClick={handleLoadResume}>
             Edit Changes
           </ButtonWrapper>

@@ -2,15 +2,45 @@ import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
 
-const Experience = () => {
+const Experience = ({ experience, onChange }) => {
   return (
     <ExperienceContainer>
-        <p>Experience</p>
-      <Input type="text" placeholder="Position" />
-      <Input type="text" placeholder="Company" />
-      <Input type="text" placeholder="City" />
-      <Input type="text" placeholder="From" />
-      <Input type="text" placeholder="To" />
+      <p>Experience</p>
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="position"
+        placeholder="Position"
+        value={experience.position}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="company"
+        placeholder="Company"
+        value={experience.company}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="city"
+        placeholder="City"
+        value={experience.city}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="from"
+        placeholder="From"
+        value={experience.from}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="to"
+        placeholder="To"
+        value={experience.to}
+      />
     </ExperienceContainer>
   );
 };

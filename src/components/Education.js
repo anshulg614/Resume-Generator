@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
 
-const Education = ({ education, onChange}) => {
+const Education = ({ education, onChange }) => {
   return (
     <EducationContainer>
       <p>Education</p>
@@ -31,7 +31,7 @@ const Education = ({ education, onChange}) => {
         onChange={(e) => onChange(e)}
         type="text"
         name="subject"
-        placeholder="Subject"
+        placeholder="Major"
         value={education.subject}
       />
       <Input
