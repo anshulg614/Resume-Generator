@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Input = ( { placeholder } ) => {
+const Input = ({ type, name, placeholder, onChange, value }) => {
   return (
     <>
-      <InputContainer placeholder = { placeholder }/>
+      <InputContainer
+        onChange={onChange}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+      />
     </>
   );
 };

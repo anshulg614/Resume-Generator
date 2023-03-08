@@ -2,15 +2,52 @@ import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
 
-const Education = () => {
+const Education = ({ education, onChange}) => {
   return (
     <EducationContainer>
-        <p>Education</p>
-      <Input type="text" placeholder="University Name" value = {Education.universityName}/>
-      <Input type="text" placeholder="City" value = {Education.city}/>
-      <Input type="text" placeholder="Degree" value={Education.degree}/>
-      <Input type="text" placeholder="From" value={Education.from}/>
-      <Input type="text" placeholder="To" value={Education.to}/>
+      <p>Education</p>
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="universityName"
+        placeholder="University name"
+        value={education.universityName}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="city"
+        placeholder="City"
+        value={education.city}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="degree"
+        placeholder="Degree"
+        value={education.degree}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        value={education.subject}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="from"
+        placeholder="From"
+        value={education.from}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="to"
+        placeholder="To"
+        value={education.to}
+      />
     </EducationContainer>
   );
 };
