@@ -71,7 +71,7 @@ const Resume = ({ education, experience, personal, project, skill }) => {
               {experience.city}
             </span>
           </p>
-          <p style = {{lineHeight: "1.2" }}>{experience.description}</p>
+          <p style = {{lineHeight: "1.5" }}>{experience.description}</p>
           <h2 style={{ marginTop: "2rem" }}>Projects</h2>
           <Line />
           <h3
@@ -88,7 +88,7 @@ const Resume = ({ education, experience, personal, project, skill }) => {
               {project.from} - {project.to}
             </span>
           </h3>
-          <p style = {{lineHeight: "1.2" }}>{project.description}</p>
+          <p style = {{lineHeight: "1.5" }}>{project.description}</p>
           <h2 style={{ marginTop: "2rem" }}>Skills</h2>
           <Line />
           <p> Advanced Skills: {skill.skill1} </p>
