@@ -4,6 +4,8 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Personal from "./Personal";
 import Resume from "./Resume";
+import Skills from "./Skills";
+import Project from "./Project";
 
 const Main = () => {
   const [showResume, setShowResume] = useState(false);
@@ -14,6 +16,7 @@ const Main = () => {
     subject: "",
     from: "",
     to: "",
+    description: "",
   });
   const [experience, setExperience] = useState({
     position: "",
@@ -21,12 +24,24 @@ const Main = () => {
     city: "",
     from: "",
     to: "",
+    description: "",
   });
   const [personal, setPersonal] = useState({
     name: "",
     address: "",
     email: "",
     number: "",
+  });
+  const [skill, setSkill] = useState({
+    skill1: "",
+    skill2: "",
+    skill3: "",
+  });
+  const [project, setProject] = useState({
+    name: "",
+    from: "",
+    to: "",
+    description: "",
   });
 
   const handleEducationInputChange = (e) => {
@@ -59,6 +74,26 @@ const Main = () => {
       };
     });
   };
+
+  const handleSkillInputChange = (e) => {
+    const { name, value } = e.target;
+    setSkill(prevState => {
+      return {
+        ...prevState,
+        [name]: value
+      };
+    });
+  };
+
+  const handleProjectInputChange = (e) => {
+    const { name, value } = e.target;
+    setProject(prevState => {
+      return {
+        ...prevState,
+        [name]: value
+      };
+    });
+  };
   
 
   const handleLoadResume = () => {
@@ -72,6 +107,8 @@ const Main = () => {
           <Personal personal={personal} onChange={handlePersonalInputChange}/>
           <Education education={education} onChange={handleEducationInputChange} />
           <Experience experience = {experience} onChange = {handleExperienceInputChange}/>
+          <Project project = {project} onChange = {handleProjectInputChange}/>
+          <Skills skill = {skill} onChange = {handleSkillInputChange}/>
           <ButtonWrapper showResume={showResume} onClick={handleLoadResume}>
             Load Resume
           </ButtonWrapper>
@@ -79,7 +116,7 @@ const Main = () => {
       )}
       {showResume && (
         <>
-          <Resume education={education} experience = {experience} personal = {personal} />
+          <Resume education={education} experience = {experience} personal = {personal} project = {project} skill = {skill}/>
           <ButtonWrapper showResume={showResume} onClick={handleLoadResume}>
             Edit Changes
           </ButtonWrapper>

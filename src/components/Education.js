@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
+import TextArea from "./TextArea";
 
 const Education = ({ education, onChange }) => {
   return (
@@ -47,6 +48,12 @@ const Education = ({ education, onChange }) => {
         name="to"
         placeholder="To"
         value={education.to}
+      />
+      <TextArea
+        onChange={(e) => onChange(e)}
+        name="description"
+        placeholder="Description"
+        value={education.description}
       />
     </EducationContainer>
   );

@@ -3,50 +3,36 @@ import styled from "styled-components";
 import Input from "./Input";
 import TextArea from "./TextArea";
 
-const Experience = ({ experience, onChange }) => {
+const Project = ({ project, onChange }) => {
   return (
     <ExperienceContainer>
-      <p>Experience</p>
+      <p>Project</p>
       <Input
         onChange={(e) => onChange(e)}
         type="text"
-        name="position"
-        placeholder="Position"
-        value={experience.position}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="company"
-        placeholder="Company"
-        value={experience.company}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="city"
-        placeholder="City"
-        value={experience.city}
+        name="name"
+        placeholder="name"
+        value={project.name}
       />
       <Input
         onChange={(e) => onChange(e)}
         type="text"
         name="from"
         placeholder="From"
-        value={experience.from}
+        value={project.from}
       />
       <Input
         onChange={(e) => onChange(e)}
         type="text"
         name="to"
         placeholder="To"
-        value={experience.to}
+        value={project.to}
       />
       <TextArea
         onChange={(e) => onChange(e)}
         name="description"
         placeholder="Description"
-        value={experience.description}
+        value={project.description}
       />
     </ExperienceContainer>
   );
@@ -64,4 +50,4 @@ const ExperienceContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
-export default Experience;
+export default Project;
